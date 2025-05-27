@@ -40,7 +40,7 @@ RUN set -x && \
 SHELL ["/bin/bash", "-c"]
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
-RUN git clone https://github.com/nnstreamer/nnstreamer.git
+RUN git clone https://github.com/mars71003219/nnstreamer.git
 WORKDIR /home/${USERNAME}/nnstreamer
 RUN mk-build-deps debian/control
 USER root
