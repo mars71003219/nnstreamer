@@ -75,8 +75,10 @@ run_entry() {
   fi
 
   if [[ "$VALGRIND" == "valgrind" ]]; then
+    echo "DEBUG: Attempting to run test binary with Valgrind: ${entry}" # Valgrind 실행 전에도 추가 (선택 사항)
     valgrind -v --suppressions=../tools/debugging/valgrind_suppression --track-origins=yes --tool=memcheck --num-callers=200 --leak-check=full ${entry} --gtest_output="xml:${entry##*/}.xml"
   else
+    echo "DEBUG: Attempting to run test binary: ${entry}" # <<< 바로 여기에 추가!
     ${entry} --gtest_output="xml:${entry##*/}.xml"
   fi
 
