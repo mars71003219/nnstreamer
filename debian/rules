@@ -27,10 +27,10 @@ export NNSTREAMER_CONVERTERS=${NNSTREAMER_BUILD_ROOT_PATH}/ext/nnstreamer/tensor
 export NNSTREAMER_TRAINERS=${NNSTREAMER_BUILD_ROOT_PATH}/ext/nnstreamer/tensor_trainer
 export PYTHONIOENCODING=utf-8
 ifeq ($(DEB_BUILD_ARCH_CPU), arm)
-FLOAT16 := -Denable-float16=true
+FLOAT16 := -Denable-float16=false
 endif
 ifeq ($(DEB_BUILD_ARCH_CPU), arm64)
-FLOAT16 := -Denable-float16=true
+FLOAT16 := -Denable-float16=false
 endif
 
 %:
