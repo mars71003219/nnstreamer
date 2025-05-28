@@ -39,7 +39,6 @@ RUN set -x && \
 
 SHELL ["/bin/bash", "-c"]
 USER ${USERNAME}
-WORKDIR /home
 WORKDIR /home/${USERNAME}
 RUN git clone https://github.com/mars71003219/nnstreamer.git
 WORKDIR /home/${USERNAME}/nnstreamer
